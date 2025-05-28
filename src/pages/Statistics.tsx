@@ -5,11 +5,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowLeft, Download, RefreshCw } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { MetricsGrid } from "@/components/statistics/MetricsGrid";
-import { RevenueChart } from "@/components/statistics/RevenueChart";
-import { UserGrowthChart } from "@/components/statistics/UserGrowthChart";
-import { ConversionFunnelChart } from "@/components/statistics/ConversionFunnelChart";
+import { ChatVolumeChart } from "@/components/statistics/ChatVolumeChart";
+import { LanguagePopularityChart } from "@/components/statistics/LanguagePopularityChart";
+import { MostLinkedPagesTable } from "@/components/statistics/MostLinkedPagesTable";
 import { TrafficSourcesChart } from "@/components/statistics/TrafficSourcesChart";
-import { RecentActivityTable } from "@/components/statistics/RecentActivityTable";
 
 const Statistics = () => {
   const navigate = useNavigate();
@@ -30,9 +29,9 @@ const Statistics = () => {
             </Button>
             <div>
               <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Statistics Dashboard
+                Chatbot Analytics
               </h1>
-              <p className="text-gray-600 mt-1">Comprehensive analytics and insights</p>
+              <p className="text-gray-600 mt-1">Monitor your chatbot performance and user interactions</p>
             </div>
           </div>
           <div className="flex gap-2">
@@ -54,54 +53,75 @@ const Statistics = () => {
         <Tabs defaultValue="overview" className="mt-8">
           <TabsList className="grid w-full grid-cols-4 max-w-md">
             <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="revenue">Revenue</TabsTrigger>
-            <TabsTrigger value="users">Users</TabsTrigger>
-            <TabsTrigger value="traffic">Traffic</TabsTrigger>
+            <TabsTrigger value="volume">Chat Volume</TabsTrigger>
+            <TabsTrigger value="languages">Languages</TabsTrigger>
+            <TabsTrigger value="pages">Linked Pages</TabsTrigger>
           </TabsList>
 
           <TabsContent value="overview" className="mt-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-              <RevenueChart />
-              <UserGrowthChart />
+              <ChatVolumeChart />
+              <LanguagePopularityChart />
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <ConversionFunnelChart />
-              <TrafficSourcesChart />
+            <div className="grid grid-cols-1 gap-6">
+              <MostLinkedPagesTable />
             </div>
           </TabsContent>
 
-          <TabsContent value="revenue" className="mt-6">
+          <TabsContent value="volume" className="mt-6">
             <div className="grid grid-cols-1 gap-6">
-              <RevenueChart />
+              <ChatVolumeChart />
               <Card>
                 <CardHeader>
-                  <CardTitle>Revenue Breakdown</CardTitle>
-                  <CardDescription>Monthly revenue analysis by product category</CardDescription>
+                  <CardTitle>Volume Insights</CardTitle>
+                  <CardDescription>Detailed analysis of chat patterns and trends</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">Detailed revenue analytics coming soon...</p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="text-center p-4 bg-blue-50 rounded-lg">
+                      <p className="text-2xl font-bold text-blue-600">2.3x</p>
+                      <p className="text-sm text-gray-600">Peak hour multiplier</p>
+                    </div>
+                    <div className="text-center p-4 bg-green-50 rounded-lg">
+                      <p className="text-2xl font-bold text-green-600">14:00</p>
+                      <p className="text-sm text-gray-600">Peak chat time</p>
+                    </div>
+                    <div className="text-center p-4 bg-purple-50 rounded-lg">
+                      <p className="text-2xl font-bold text-purple-600">Monday</p>
+                      <p className="text-sm text-gray-600">Busiest day</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>
           </TabsContent>
 
-          <TabsContent value="users" className="mt-6">
-            <div className="grid grid-cols-1 gap-6">
-              <UserGrowthChart />
-              <RecentActivityTable />
+          <TabsContent value="languages" className="mt-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <LanguagePopularityChart />
+              <TrafficSourcesChart />
             </div>
           </TabsContent>
 
-          <TabsContent value="traffic" className="mt-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <TrafficSourcesChart />
+          <TabsContent value="pages" className="mt-6">
+            <div className="grid grid-cols-1 gap-6">
+              <MostLinkedPagesTable />
               <Card>
                 <CardHeader>
-                  <CardTitle>Page Views</CardTitle>
-                  <CardDescription>Most visited pages this month</CardDescription>
+                  <CardTitle>Link Performance</CardTitle>
+                  <CardDescription>How users interact with shared links</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">Page analytics coming soon...</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="text-center p-4 bg-orange-50 rounded-lg">
+                      <p className="text-2xl font-bold text-orange-600">73.2%</p>
+                      <p className="text-sm text-gray-600">Click-through rate</p>
+                    </div>
+                    <div className="text-center p-4 bg-indigo-50 rounded-lg">
+                      <p className="text-2xl font-bold text-indigo-600">4.7</p>
+                      <p className="text-sm text-gray-600">Avg links per chat</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>

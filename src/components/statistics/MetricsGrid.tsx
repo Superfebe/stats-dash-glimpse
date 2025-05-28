@@ -1,81 +1,80 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { 
-  Users, 
-  DollarSign, 
+  MessageCircle, 
   TrendingUp, 
-  BarChart3, 
-  Eye, 
-  MousePointer,
-  ShoppingCart,
+  Users, 
+  Globe,
+  Link,
+  Calendar,
+  Clock,
   Target
 } from "lucide-react";
 
 const MetricsGrid = () => {
   const metrics = [
     {
-      title: "Total Users",
-      value: "12,847",
+      title: "Total Chats Today",
+      value: "1,247",
       change: "+12.5%",
       changeType: "positive",
-      icon: Users,
+      icon: MessageCircle,
       color: "blue"
     },
     {
-      title: "Revenue",
-      value: "$89,432",
-      change: "+23.1%",
+      title: "Active Websites",
+      value: "89",
+      change: "+3",
       changeType: "positive",
-      icon: DollarSign,
+      icon: Globe,
       color: "green"
     },
     {
-      title: "Conversion Rate",
-      value: "3.24%",
-      change: "+0.4%",
+      title: "Response Rate",
+      value: "94.2%",
+      change: "+2.1%",
       changeType: "positive",
       icon: Target,
       color: "purple"
     },
     {
-      title: "Page Views",
-      value: "234,567",
-      change: "+8.2%",
+      title: "Avg Response Time",
+      value: "1.2s",
+      change: "-0.3s",
       changeType: "positive",
-      icon: Eye,
+      icon: Clock,
       color: "orange"
     },
     {
-      title: "Click Rate",
-      value: "12.8%",
-      change: "-2.1%",
-      changeType: "negative",
-      icon: MousePointer,
-      color: "red"
-    },
-    {
-      title: "Orders",
-      value: "1,247",
+      title: "Weekly Chats",
+      value: "8,734",
       change: "+15.3%",
       changeType: "positive",
-      icon: ShoppingCart,
+      icon: Calendar,
       color: "indigo"
     },
     {
-      title: "Growth Rate",
-      value: "23.5%",
-      change: "+5.2%",
+      title: "Monthly Chats",
+      value: "34,521",
+      change: "+23.7%",
       changeType: "positive",
       icon: TrendingUp,
       color: "pink"
     },
     {
-      title: "Active Sessions",
-      value: "3,421",
-      change: "+7.8%",
+      title: "Page Links Shared",
+      value: "2,891",
+      change: "+8.9%",
       changeType: "positive",
-      icon: BarChart3,
+      icon: Link,
       color: "cyan"
+    },
+    {
+      title: "Active Languages",
+      value: "12",
+      change: "+2",
+      changeType: "positive",
+      icon: Users,
+      color: "red"
     }
   ];
 

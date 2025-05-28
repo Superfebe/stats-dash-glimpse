@@ -4,11 +4,11 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recha
 
 const TrafficSourcesChart = () => {
   const data = [
-    { name: 'Organic Search', value: 45, color: '#3b82f6' },
-    { name: 'Direct', value: 25, color: '#10b981' },
-    { name: 'Social Media', value: 15, color: '#8b5cf6' },
-    { name: 'Email', value: 10, color: '#f59e0b' },
-    { name: 'Paid Ads', value: 5, color: '#ef4444' }
+    { name: 'E-commerce Sites', value: 35, color: '#3b82f6' },
+    { name: 'Corporate Websites', value: 28, color: '#10b981' },
+    { name: 'SaaS Platforms', value: 20, color: '#8b5cf6' },
+    { name: 'Educational Sites', value: 12, color: '#f59e0b' },
+    { name: 'Other', value: 5, color: '#ef4444' }
   ];
 
   const COLORS = data.map(item => item.color);
@@ -16,8 +16,8 @@ const TrafficSourcesChart = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Traffic Sources</CardTitle>
-        <CardDescription>Where your users are coming from</CardDescription>
+        <CardTitle>Website Categories</CardTitle>
+        <CardDescription>Types of websites using your chatbot</CardDescription>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={300}>

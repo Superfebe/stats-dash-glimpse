@@ -8,7 +8,6 @@ import { MetricsGrid } from "@/components/statistics/MetricsGrid";
 import { ChatVolumeChart } from "@/components/statistics/ChatVolumeChart";
 import { LanguagePopularityChart } from "@/components/statistics/LanguagePopularityChart";
 import { MostLinkedPagesTable } from "@/components/statistics/MostLinkedPagesTable";
-import { TrafficSourcesChart } from "@/components/statistics/TrafficSourcesChart";
 
 const Statistics = () => {
   const navigate = useNavigate();
@@ -97,9 +96,8 @@ const Statistics = () => {
           </TabsContent>
 
           <TabsContent value="languages" className="mt-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
               <LanguagePopularityChart />
-              <TrafficSourcesChart />
             </div>
           </TabsContent>
 

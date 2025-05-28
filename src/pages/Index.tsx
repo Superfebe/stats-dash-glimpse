@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BarChart3, TrendingUp, Users, DollarSign } from "lucide-react";
+import { BarChart3, TrendingUp, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
@@ -20,8 +20,8 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Quick Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {/* Quick Overview */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
           <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
@@ -38,34 +38,10 @@ const Index = () => {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">Revenue</p>
-                  <p className="text-3xl font-bold text-green-600">$89,432</p>
-                </div>
-                <DollarSign className="h-12 w-12 text-green-500 opacity-80" />
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
                   <p className="text-sm text-gray-600 mb-1">Growth Rate</p>
                   <p className="text-3xl font-bold text-purple-600">+23.5%</p>
                 </div>
                 <TrendingUp className="h-12 w-12 text-purple-500 opacity-80" />
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm text-gray-600 mb-1">Conversions</p>
-                  <p className="text-3xl font-bold text-orange-600">1,247</p>
-                </div>
-                <BarChart3 className="h-12 w-12 text-orange-500 opacity-80" />
               </div>
             </CardContent>
           </Card>

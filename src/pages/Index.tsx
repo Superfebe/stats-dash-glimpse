@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BarChart3, TrendingUp, Users } from "lucide-react";
+import { BarChart3, TrendingUp, Users, Database } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
@@ -47,9 +47,9 @@ const Index = () => {
           </Card>
         </div>
 
-        {/* Main Action */}
-        <div className="text-center">
-          <Card className="max-w-2xl mx-auto">
+        {/* Main Actions */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <Card>
             <CardHeader>
               <CardTitle className="text-2xl">Detailed Analytics</CardTitle>
               <CardDescription>
@@ -60,10 +60,29 @@ const Index = () => {
               <Button 
                 onClick={() => navigate('/statistics')}
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg w-full"
               >
                 <BarChart3 className="mr-2 h-5 w-5" />
                 View Statistics
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl">Data Management</CardTitle>
+              <CardDescription>
+                Manage your chatbot's knowledge base, upload files, and configure product catalogs
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Button 
+                onClick={() => navigate('/data')}
+                size="lg"
+                className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-3 text-lg w-full"
+              >
+                <Database className="mr-2 h-5 w-5" />
+                Manage Data
               </Button>
             </CardContent>
           </Card>

@@ -1,13 +1,14 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   MessageCircle, 
   TrendingUp, 
   Users, 
-  Globe,
   Link,
   Calendar,
   Clock,
-  Target
+  Target,
+  Globe
 } from "lucide-react";
 
 const MetricsGrid = () => {
@@ -21,11 +22,11 @@ const MetricsGrid = () => {
       color: "blue"
     },
     {
-      title: "Active Websites",
-      value: "89",
-      change: "+3",
+      title: "User Interactions",
+      value: "3,892",
+      change: "+18.3%",
       changeType: "positive",
-      icon: Globe,
+      icon: Users,
       color: "green"
     },
     {
@@ -61,7 +62,7 @@ const MetricsGrid = () => {
       color: "pink"
     },
     {
-      title: "Page Links Shared",
+      title: "Links Shared",
       value: "2,891",
       change: "+8.9%",
       changeType: "positive",
@@ -69,11 +70,11 @@ const MetricsGrid = () => {
       color: "cyan"
     },
     {
-      title: "Active Languages",
+      title: "Languages Detected",
       value: "12",
       change: "+2",
       changeType: "positive",
-      icon: Users,
+      icon: Globe,
       color: "red"
     }
   ];
